@@ -14,5 +14,9 @@ function update()
         player1.decelerate(moveDistance);
 
     player1.move();
+    if (player2.position.x > WIDTH / 2)
+        player2.position.x = -WIDTH/2;
+    player2.accelerate(moveDistance);
+    player2.move();
     controls.update();
 }
