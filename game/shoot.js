@@ -77,10 +77,9 @@ function player_falling()
     var sizeOfTileY = HEIGHT / nb_tile;
     var x = player1.graphic.position.x | 0;
     var y = player1.graphic.position.y | 0;
-    var length = noGround.length;
     var element = null;
 
-    for (var i = 0; i < length; i++) {
+    for (var i = 0; i < noGround.length; i++) {
         element = noGround[i];
 
         var tileX = (element[0]) | 0;
