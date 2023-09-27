@@ -53,6 +53,19 @@ function bullet_collision()
         }
     }
 
+    for (var i = 0; i < player1.bullets.length; i++)
+    {
+        if (Math.abs(player1.bullets[i].position.x - player2.position.x) <= 10 &&
+            Math.abs(player1.bullets[i].position.y - player2.position.y) <= 5)
+        {
+            scene.remove(player1.bullets[i]);
+            player1.bullets.splice(i, 1);
+            scene.remove(player2.graphic);
+            player2 = new Player("player2", 0x00ffff, new THREE.Vector2(Math.floor(Math.random()*400-200), Math.floor(Math.random()*400-200)), 0)
+            scene.add(player2.graphic);
+            i--;
+        }
+    }
 }
 
 function player_collision()
