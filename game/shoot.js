@@ -113,10 +113,10 @@ function player_falling()
         var mtileX = (element[0] + sizeOfTileX) | 0;
         var mtileY = (element[1] + sizeOfTileY) | 0;
 
-        if ((x > tileX)
-            && (x < mtileX)
-            && (y > tileY) 
-            && (y < mtileY))
+        if ((x > tileX-sizeOfTileX/2)
+            && (x < mtileX-sizeOfTileX/2)
+            && (y > tileY-sizeOfTileY/2) 
+            && (y < mtileY-sizeOfTileY/2))
         {
             if (player1.life == 1)
                 player1.dead();
